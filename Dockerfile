@@ -13,7 +13,7 @@ FROM composer/composer:2-bin AS composer_upstream
 # Base FrankenPHP image
 FROM frankenphp_upstream AS frankenphp_base
 
-WORKDIR /app
+WORKDIR /var/www/html
 
 # persistent / runtime deps
 # hadolint ignore=DL3018
@@ -33,6 +33,12 @@ RUN set -eux; \
 	;
 
 ###> recipes ###
+###> doctrine/doctrine-bundle ###
+RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \
+	docker-php-ext-install -j"$(nproc)" pdo_pgsql; \
+	apk add --no-cache --virtual .pgsql-rundeps so:libpq.so.5; \
+	apk del .pgsql-deps
+###< doctrine/doctrine-bundle ###
 ###< recipes ###
 
 COPY --link frankenphp/conf.d/app.ini $PHP_INI_DIR/conf.d/
@@ -54,7 +60,7 @@ CMD [ "frankenphp", "run", "--config", "/etc/caddy/Caddyfile" ]
 FROM frankenphp_base AS frankenphp_dev
 
 ENV APP_ENV=dev XDEBUG_MODE=off
-VOLUME /app/var/
+VOLUME /var/www/html/var/
 
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
