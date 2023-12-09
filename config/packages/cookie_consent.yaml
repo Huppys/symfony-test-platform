@@ -1,0 +1,29 @@
+cookie_consent:
+  cookie_settings:
+    name_prefix: '' # string, any string you like to prefix the cookie names with
+    cookies:
+      consent_cookie:
+        http_only: true # boolean, refer to mdn docs for more info
+        secure: true # boolean, enable or disable transport only over https
+        same_site: 'lax' # available values: 'strict', 'lax', 'none'
+        expires: 'P180D' # available values: PHP formatted date string, 'P180D' (180 days), 'P1Y' (1 year) etc.
+      consent_key_cookie:
+        http_only: true
+        secure: true
+        same_site: 'lax'
+        expires: 'P180D'
+      consent_categories_cookie:
+        http_only: true
+        secure: true
+        same_site: 'lax'
+        expires: 'P180D'
+  consent_categories: # Below are the default supported categories
+    - 'analytics'
+    - 'tracking'
+    - 'marketing'
+    - 'social_media'
+  theme: 'light' # available values: 'light', 'dark'
+  persist_consent: true # boolean; logs user actions to database
+  position: 'dialog' # available values: 'top', 'bottom', 'dialog'
+#  form_action: $routeName # When set, xhr-Requests will only be sent to this route. Take care of having the route available.
+  csrf_protection: true # boolean; enable or disable csrf protection for the form

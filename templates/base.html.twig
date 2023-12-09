@@ -9,9 +9,11 @@
 
         {% block javascripts %}
         {% endblock %}
+
+        {% include("@CookieConsent/cookie_consent_styling.html.twig") %}
     </head>
     <body>
-        {{ render_esi(path('ch_cookie_consent.show')) }}
+        {{ render_esi(path('cookie_consent.show')) }}
         {% block body %}{% endblock %}
     </body>
 </html>

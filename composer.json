@@ -15,12 +15,15 @@
     "php": ">=8.3.0",
     "ext-ctype": "*",
     "ext-iconv": "*",
-    "connectholland/cookie-consent-bundle": "@dev",
+    "doctrine/doctrine-migrations-bundle": "^3.0",
+    "huppys/cookie-consent-bundle": "dev-upgrade-php8.1",
     "runtime/frankenphp-symfony": "dev-main",
     "symfony/console": "7.0.*",
     "symfony/flex": "^2.4",
     "symfony/framework-bundle": "7.0.*",
-    "symfony/runtime": "7.0.*"
+    "symfony/monolog-bundle": "^3.10",
+    "symfony/runtime": "7.0.*",
+    "symfony/security-csrf": "7.0.*"
   },
   "config": {
     "allow-plugins": {

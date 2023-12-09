@@ -1,0 +1,2 @@
+cookie_consent:
+    resource: "@CookieConsentBundle/Resources/config/routing.yaml"

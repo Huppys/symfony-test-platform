@@ -19,6 +19,8 @@ services:
     extra_hosts:
       # Ensure that host.docker.internal is correctly defined on Linux
       - host.docker.internal:host-gateway
+    links:
+      - database
     tty: true
 
 ###> symfony/mercure-bundle ###
@@ -27,5 +29,5 @@ services:
 ###> doctrine/doctrine-bundle ###
   database:
     ports:
-      - "5432"
-###< doctrine/doctrine-bundle ###
+      - "5432:5432"
+      ###< doctrine/doctrine-bundle ###
