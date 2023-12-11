@@ -13,7 +13,7 @@
         {% include("@CookieConsent/cookie_consent_styling.html.twig") %}
     </head>
     <body>
-        {{ render_esi(path('cookie_consent.show')) }}
+        {{ render_esi(path('cookie_consent.show_if_cookie_consent_not_set')) }}
         {% block body %}{% endblock %}
     </body>
 </html>
