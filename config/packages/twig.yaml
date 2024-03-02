@@ -1,8 +1,19 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
     form_themes:
-        - 'bootstrap_5_layout.html.twig'
+#        - 'form_div_layout.html.twig'
+#        - 'form_table_layout.html.twig'
+#        - 'bootstrap_3_layout.html.twig'
+#        - 'bootstrap_3_horizontal_layout.html.twig'
+#        - 'bootstrap_4_layout.html.twig'
+#        - 'bootstrap_4_horizontal_layout.html.twig'
+#        - 'bootstrap_5_horizontal_layout.html.twig'
+#        - 'foundation_5_layout.html.twig'
+#        - 'foundation_6_layout.html.twig'
+#        - 'tailwind_2_layout.html.twig'
 #        - '@CookieConsent/form/cookie_consent_form_theme.html.twig'
+#        - 'bootstrap_5_layout.html.twig'
+        - 'cookie_consent/consent_form_theme.twig'
 
 when@test:
     twig:
