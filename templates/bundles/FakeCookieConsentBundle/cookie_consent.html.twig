@@ -1,0 +1,9 @@
+{% extends '@!CookieConsent/cookie_consent.html.twig' %} {# this extends the base layout #}
+
+{% block header %}
+    {{ parent() }}
+    {% block intro %}
+        <p>Ha! Even better intro!</p>
+    {% endblock intro %}
+
+{% endblock header %}

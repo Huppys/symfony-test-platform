@@ -14,3 +14,5 @@ function startWebsocketClient() {
 }
 
 window.startWebsocketClient = startWebsocketClient;
+
+window.startWebsocketClient();

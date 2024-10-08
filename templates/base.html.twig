@@ -19,15 +19,15 @@
 
 </head>
 <body>
-{{ render_esi(path('cookie_consent.show_if_cookie_consent_not_set')) }}
-{#        {{ render_esi(path('cookie_consent.show')) }} #}
+{#{{ render_esi(path('cookie_consent.show_if_cookie_consent_not_set')) }}#}
+        {{ render_esi(path('cookie_consent.show')) }}
 {% block body %}{% endblock %}
 
 Is any cookie consent given by this user?
-{% if cookieconsent_isCookieConsentOptionSetByUser() == true %}
-    : Yes
-{% else %}
-    : No
-{% endif %}
+{#{% if cookieconsent_isCookieConsentOptionSetByUser() == true %}#}
+{#    : Yes 👍 #}
+{#{% else %}#}
+{#    : No 👎 #}
+{#{% endif %}#}
 </body>
 </html>

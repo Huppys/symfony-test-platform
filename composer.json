@@ -16,7 +16,6 @@
     "ext-ctype": "*",
     "ext-iconv": "*",
     "doctrine/doctrine-migrations-bundle": "^3.0",
-    "huppys/cookie-consent-bundle": "@dev",
     "runtime/frankenphp-symfony": "dev-main",
     "symfony/console": "7.0.*",
     "symfony/flex": "^2.4",
@@ -24,7 +23,8 @@
     "symfony/framework-bundle": "7.0.*",
     "symfony/monolog-bundle": "^3.10",
     "symfony/runtime": "7.0.*",
-    "symfony/security-csrf": "7.0.*"
+    "symfony/security-csrf": "7.0.*",
+    "huppys/cookie-consent-bundle": "@dev"
   },
   "config": {
     "allow-plugins": {
